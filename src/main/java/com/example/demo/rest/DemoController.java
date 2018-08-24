@@ -15,7 +15,7 @@ public class DemoController {
         @GetMapping
         public Map<String, String> index() {
             Map<String, String> index = new HashMap<>();
-            index.put("key", "test");
+            index.put("app", "Spring Boot with KeyCloak authentication");
             index.put("version", "1.0");
 
         return index;

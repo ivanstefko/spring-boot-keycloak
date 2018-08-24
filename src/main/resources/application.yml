@@ -8,6 +8,8 @@ server:
   error:
     whitelabel:
       enabled: false
+  servlet:
+    context-path: /spring-boot-keycloak
 
 # Default spring profile. Profile definition in context.xml or in program arguments as --spring.profiles.active overrides it.
 spring:
