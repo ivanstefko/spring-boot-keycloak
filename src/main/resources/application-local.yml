@@ -1,0 +1,32 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# SPRING SETTINGS
+# ----------------------------------------------------------------------------------------------------------------------
+spring:
+
+  # DATASOURCE
+  # datasource:
+  #   url: jdbc:oracle:thin:@(DESCRIPTION =(ADDRESS =(PROTOCOL = TCP)(HOST=t3doradb037.solar.cat.com)(PORT = 1521))(ADDRESS=(PROTOCOL=TCP))(CONNECT_DATA=(SERVER = DEDICATED)(SERVICE_NAME = t3kp)))
+  #   driver-class-name: oracle.jdbc.driver.OracleDriver
+  #   tomcat:
+  #     initial-size: 0
+
+  # JPA
+  # jpa:
+  #   show-sql: true
+  #   database-platform: org.hibernate.dialect.Oracle12cDialect
+
+  # JACKSON
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+# ----------------------------------------------------------------------------------------------------------------------
+# EMBEDED TOMCAT SETTINGS
+# ----------------------------------------------------------------------------------------------------------------------
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:cert/gmcsrmd.jks
+    key-store-password: asdflkj!@#$1234lkjasdf__@#443ASDE
+    enabled: true
+    protocol: TLS
