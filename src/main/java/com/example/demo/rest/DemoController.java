@@ -12,7 +12,7 @@ public class DemoController {
 
     private String test;
 
-        @GetMapping
+        @GetMapping("/rest")
         public Map<String, String> index() {
             Map<String, String> index = new HashMap<>();
             index.put("app", "Spring Boot with KeyCloak authentication");
