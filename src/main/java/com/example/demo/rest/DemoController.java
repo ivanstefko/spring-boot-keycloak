@@ -1,23 +1,26 @@
-
 package com.example.demo.rest;
 
+import com.example.demo.service.KeyCloakService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 public class DemoController {
 
-    private String test;
+    @Autowired
+    KeyCloakService service;
 
-        @GetMapping("/rest")
-        public Map<String, String> index() {
-            Map<String, String> index = new HashMap<>();
-            index.put("app", "Spring Boot with KeyCloak authentication");
-            index.put("version", "1.0");
-
-        return index;
+    @GetMapping("/realm/1")
+    public Map<String, String> realm1() {
+        return service.getRealmData1();
     }
+
+    @GetMapping("/realm/2")
+    public Map<String, String> realm2() {
+        return service.getRealmData2();
+    }
+
 }
